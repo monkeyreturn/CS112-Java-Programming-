@@ -13,8 +13,19 @@ public class GuessANumber {
 		System.out.print("Set lowest random number: ");
 		int userInputLow = input.nextInt();
 		
+		Syste.out.print("Guess a number: ");
+		int num = input.nextInt();
+		
 		int A = RandomNumber.GetANumber(userInputLow, userInputHigh);
-		System.out.print(A);
+		
+		
+			if (num == A)
+			System.out.print("Good Job");
+		else if (num < A)
+			System.out.printf("Too Low. The correct number is: %d", A);
+		else
+			System.out.printf("Too High. The correct number is: %d", A);
+			
 	}
 
 }
